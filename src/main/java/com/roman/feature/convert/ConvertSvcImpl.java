@@ -14,7 +14,7 @@ import static java.lang.Integer.parseInt;
 @Log4j2
 @Service public class ConvertSvcImpl implements ConvertSvc {
 
-        // Single Digit Roman Numeral Representations
+    // Single Digit Roman Numeral Representations
     private static final String[] ones = { "",
             "I",     // 1
             "II",    // 2
@@ -62,6 +62,12 @@ import static java.lang.Integer.parseInt;
 
     public String getRoman(String x) {
         log.info("ConvertSvc || Generating roman numeral for integer={}", x);
+        
+        int num = parseInt(x);
+
+        if(num > 3000 || num < 0)
+            return "That numeral is currently unobtainable :/";
+
         return null;
     }
 

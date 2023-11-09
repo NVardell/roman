@@ -60,6 +60,12 @@ import static java.lang.Integer.parseInt;
             "MMM"    // 3000
     };
 
+    
+    /**
+     * Convert integer value between 0-3000 to a roman numeral.
+     * @param x ~ Integer to convert
+     * @return String ~ Roman Numeral Representation of x
+     */
     public String getRoman(String x) {
         log.info("ConvertSvc || Generating roman numeral for integer={}", x);
         

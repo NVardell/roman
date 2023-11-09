@@ -68,7 +68,11 @@ import static java.lang.Integer.parseInt;
         if(num > 3000 || num < 0)
             return "That numeral is currently unobtainable :/";
 
-        return null;
+        // Retrieve Roman Numeral representation for the individual numeric value
+        return thousands[ num / 1000 ]
+                + hundreds[ (num%1000) / 100 ]
+                + tens[ (num%100) / 10]
+                + ones[ num%10 ];
     }
 
     public String getInteger(String x) {
